@@ -55,7 +55,6 @@ class  Vehicle
     }
 }
 
-
 class Car extends Vehicle
 {
 
@@ -118,3 +117,136 @@ $motorcycle->index();
 
 $airplane = new Airplane();
 $airplane->index();
+
+// -------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------
+echo "ikinci kodlar <br> <br> <br> <br>";
+// -------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------
+
+abstract class Vehicle1
+{
+
+    //abstract method
+    public abstract function plate($plate);
+
+    public abstract function brand($brand);
+
+    public abstract function model($model);
+
+    public abstract function wheels($wheels);
+
+    public abstract function wing($wing);
+}
+
+
+class Car1 extends Vehicle1
+{
+
+    public function plate($plate)
+    {
+        echo "Plaka No: " . $plate . "<br>";
+    }
+    public function brand($brand)
+    {
+        echo "Marka:" . $brand . "<br>";
+    }
+    public function model($model)
+    {
+        echo "Model:" . $model . "<br>";
+    }
+
+    public function wheels($wheels)
+    {
+        echo "Tekerlek Sayısı :" . $wheels . "<br>";
+    }
+    public function wing($wing)
+    {
+    }
+}
+
+class Motorcycle1 extends Vehicle1
+{
+
+    public function plate($plate)
+    {
+        echo "Plaka No: " . $plate . "<br>";
+    }
+    public function brand($brand)
+    {
+        echo "Marka:" . $brand . "<br>";
+    }
+    public function model($model)
+    {
+        echo "Model:" . $model . "<br>";
+    }
+
+    public function wheels($wheels)
+    {
+        echo "Tekerlek Sayısı :" . $wheels . "<br>";
+    }
+    public function wing($wing)
+    {
+    }
+}
+
+
+
+class Airplane1 extends Vehicle1
+{
+
+    public function plate($plate)
+    {
+    }
+    public function brand($brand)
+    {
+        echo "Marka:" . $brand . "<br>";
+    }
+    public function model($model)
+    {
+        echo "Model:" . $model . "<br>";
+    }
+
+    public function wheels($wheels)
+    {
+    }
+
+    public function wing($wing)
+    {
+        echo "Kanat Açıklığı: " . $wing . "<br>";
+    }
+}
+
+echo "--------Car---------- " . '<br>';
+$car = new Car1();
+echo $car->plate("06 ARAC 06");
+echo $car->brand("Mercedes");
+echo $car->model("C180");
+echo $car->wheels("4");
+echo "--------Car---------- " . '<br> <br> <br>';
+
+
+echo "--------Motorcycle---------- " . '<br>';
+$motorcycle = new Motorcycle1();
+echo $motorcycle->plate("06 ARAC 06");
+echo $motorcycle->brand("Honda");
+echo $motorcycle->model("Forza 750");
+echo $motorcycle->wheels("2");
+echo "--------Motorcycle---------- " . '<br> <br> <br>';
+
+
+echo "--------Airplane---------- " . '<br>';
+$airplane = new Airplane1();
+echo $airplane->brand("Airbus");
+echo $airplane->model("A380");
+echo $airplane->wing("80m");
+echo "--------Airplane---------- " . '<br> <br> <br>';
