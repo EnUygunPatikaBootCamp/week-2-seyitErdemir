@@ -226,27 +226,155 @@ class Airplane1 extends Vehicle1
     }
 }
 
-echo "--------Car---------- " . '<br>';
+echo "--------Car1---------- " . '<br>';
 $car = new Car1();
 echo $car->plate("06 ARAC 06");
 echo $car->brand("Mercedes");
 echo $car->model("C180");
 echo $car->wheels("4");
-echo "--------Car---------- " . '<br> <br> <br>';
+echo "--------Car1---------- " . '<br> <br> <br>';
 
 
-echo "--------Motorcycle---------- " . '<br>';
+echo "--------Motorcycle1---------- " . '<br>';
 $motorcycle = new Motorcycle1();
 echo $motorcycle->plate("06 ARAC 06");
 echo $motorcycle->brand("Honda");
 echo $motorcycle->model("Forza 750");
 echo $motorcycle->wheels("2");
-echo "--------Motorcycle---------- " . '<br> <br> <br>';
+echo "--------Motorcycle1---------- " . '<br> <br> <br>';
 
 
-echo "--------Airplane---------- " . '<br>';
+echo "--------Airplane1---------- " . '<br>';
 $airplane = new Airplane1();
 echo $airplane->brand("Airbus");
 echo $airplane->model("A380");
 echo $airplane->wing("80m");
-echo "--------Airplane---------- " . '<br> <br> <br>';
+echo "--------Airplane1---------- " . '<br> <br> <br>';
+
+
+// -------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------
+echo "üçüncü  kodlar <br> <br> <br> <br>";
+// -------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------
+
+
+interface   Vehicle2
+{
+    public    function plate($plate);
+
+    public function brand($brand);
+
+    public  function model($model);
+}
+
+interface Wheels
+{
+    public  function wheels($wheels);
+}
+interface Wing
+{
+    public  function wing($wing);
+}
+
+
+class Car2 implements Vehicle2, Wheels
+{
+
+    public function plate($plate)
+    {
+        echo "Plaka No: " . $plate . "<br>";
+    }
+    public function brand($brand)
+    {
+        echo "Marka:" . $brand . "<br>";
+    }
+    public function model($model)
+    {
+        echo "Model:" . $model . "<br>";
+    }
+
+    public function wheels($wheels)
+    {
+        echo "Tekerlek Sayısı :" . $wheels . "<br>";
+    }
+}
+
+
+class Motorcycle2 implements Vehicle2, Wheels
+{
+
+    public function plate($plate)
+    {
+        echo "Plaka No: " . $plate . "<br>";
+    }
+    public function brand($brand)
+    {
+        echo "Marka:" . $brand . "<br>";
+    }
+    public function model($model)
+    {
+        echo "Model:" . $model . "<br>";
+    }
+
+    public function wheels($wheels)
+    {
+        echo "Tekerlek Sayısı :" . $wheels . "<br>";
+    }
+}
+
+class Airplane2 implements Vehicle2, Wing
+{
+
+    public function plate($plate)
+    {
+    }
+    public function brand($brand)
+    {
+        echo "Marka:" . $brand . "<br>";
+    }
+    public function model($model)
+    {
+        echo "Model:" . $model . "<br>";
+    }
+
+
+    public function wing($wing)
+    {
+        echo "Kanat Açıklığı: " . $wing . "<br>";
+    }
+}
+
+echo "--------Car2---------- " . '<br>';
+$car = new Car2();
+echo $car->plate("06 ARAC 06");
+echo $car->brand("Mercedes");
+echo $car->model("C180");
+echo $car->wheels("4");
+echo "--------Car2---------- " . '<br> <br> <br>';
+
+
+echo "--------Motorcycle2---------- " . '<br>';
+$motorcycle = new Motorcycle2();
+echo $motorcycle->plate("06 ARAC 06");
+echo $motorcycle->brand("Honda");
+echo $motorcycle->model("Forza 750");
+echo $motorcycle->wheels("2");
+echo "--------Motorcycle2---------- " . '<br> <br> <br>';
+
+
+echo "--------Airplane2---------- " . '<br>';
+$airplane = new Airplane2();
+echo $airplane->brand("Airbus");
+echo $airplane->model("A380");
+echo $airplane->wing("80m");
+echo "--------Airplane2---------- " . '<br> <br> <br>';
